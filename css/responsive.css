@@ -84,7 +84,7 @@
     .nav-menu {
         position: fixed;
         top: 0;
-        right: -100%;
+        right: -285px;
         width: 280px;
         height: 100vh;
         background: rgba(3, 7, 18, 0.95);
