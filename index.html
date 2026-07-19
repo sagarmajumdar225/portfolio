@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagar Majumdar | Cyber Security Specialist & Ethical Hacker</title>
+    
+    <!-- SEO Optimization -->
+    <meta name="description" content="Portfolio of Sagar Majumdar - Cybersecurity Specialist, Ethical Hacker & Branch Director. Expert in penetration testing, vulnerability assessments, and secure infrastructure auditing.">
+    <meta name="keywords" content="Cybersecurity, Ethical Hacker, Penetration Testing, Vulnerability Assessment, Sagar Majumdar, CBCE Habra, Security Audit, OWASP">
+    <meta name="author" content="Sagar Majumdar">
+    <link rel="canonical" href="https://sagarmajumdar.in">
+    
+    <!-- Open Graph / Social Media Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sagar Majumdar | Cyber Security Specialist">
+    <meta property="og:description" content="Offensive security professional specializing in infrastructure audit, penetration testing, and IT security curriculum design.">
+    <meta property="og:url" content="https://sagarmajumdar.in">
+    <meta property="og:image" content="https://sagarmajumdar.in/assets/images/project1.png">
+    
+    <!-- Twitter Cards Meta -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sagar Majumdar | Cyber Security Specialist">
+    <meta name="twitter:description" content="Offensive security professional specializing in infrastructure audit, penetration testing, and IT security curriculum design.">
+    <meta name="twitter:image" content="https://sagarmajumdar.in/assets/images/project1.png">
+    
+    <!-- JSON-LD Structured Data Schema (Rich Snippets) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Sagar Majumdar",
+      "jobTitle": "Cybersecurity Specialist & Ethical Hacker",
+      "url": "https://sagarmajumdar.in",
+      "image": "https://sagarmajumdar.in/assets/images/profile.jpg",
+      "sameAs": [
+        "https://www.linkedin.com/in/sagarmajumdar",
+        "https://github.com/sagarmajumdar225",
+        "https://sagar-majumdar.medium.com/",
+        "https://www.facebook.com/sagarmajumdar.in",
+        "https://www.instagram.com/sagarmajumdar.in"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Habra",
+        "addressRegion": "West Bengal",
+        "addressCountry": "India"
+      },
+      "knowsAbout": [
+        "Cybersecurity",
+        "Penetration Testing",
+        "Ethical Hacking",
+        "Vulnerability Assessment",
+        "Web Application Security",
+        "Active Directory Auditing",
+        "Network Security Auditing"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "CBCE HABRA"
+      }
+    }
+    </script>
+    
+    <!-- External Styles & Icon Fonts -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Font Pre-connections for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+    <!-- Cyber Scanlines & Background Aura Overlay -->
+    <div class="scanlines"></div>
+    <div class="digital-grid"></div>
+    <canvas id="networkCanvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; pointer-events: none;"></canvas>
+    <div class="aurora-bg">
+        <div class="aurora-blob one"></div>
+        <div class="aurora-blob two"></div>
+        <div class="aurora-blob three"></div>
+    </div>
+    
+    <!-- Cursor Interactive Spotlight Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Hacker Loading Boot Sequence Screen -->
+    <div id="preloader">
+        <div class="loader-container">
+            <div class="loader-header">
+                <div class="loader-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="loader-title">CORE SECURITY CONSOLE v3.5.0</div>
+            </div>
+            <div class="loader-terminal" id="loaderTerminal">
+                <!-- Executed dynamically in JS for custom print speed -->
+            </div>
+            <div class="loader-progress-bar">
+                <div class="loader-progress" id="loaderProgress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Premium Sticky Header Navbar -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#home" class="logo">
+                    <span class="logo-icon">SM</span>
+                    <span class="logo-text">SECURE</span>
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#console" class="nav-link">Console</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger" role="button" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Hero Dashboard Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-layout">
+                <div class="hero-text">
+                    <div class="security-badge-wrapper">
+                        <div class="security-status">SYSTEM POSTURE: HYPER-SECURE</div>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="gradient-text-green">Securing Digital</span> 
+                        <span class="gradient-text-blue">Frontiers.</span>
+                    </h1>
+                    <div class="hero-subtitle-container">
+                        <h2 class="hero-subtitle" id="typewriter"></h2>
+                    </div>
+                    <p class="hero-desc">
+                        Vulnerability researcher & offensive security specialist. Securing corporate infrastructure through rigorous penetration testing, proactive threat modeling, and defensive architecture.
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="#contact" class="btn btn-primary" id="btnRequest">Request Assessment</a>
+                        <a href="#projects" class="btn btn-secondary" id="btnWork">View Case Studies</a>
+                    </div>
+                </div>
+                
+                <div class="hero-image-wrapper">
+                    <div class="profile-container" id="profileCard">
+                        <!-- Holographic border rotating layers -->
+                        <div class="profile-scanner-bezel"></div>
+                        <div class="profile-scanner-bezel-inner"></div>
+                        <!-- Profile inner image box -->
+                        <div class="profile-border-inner">
+                            <img src="assets/images/profile.jpg" alt="Sagar Majumdar" class="profile-img">
+                            <div class="profile-laser-line"></div>
+                        </div>
+                    </div>
+                    <!-- Cyber decoration elements -->
+                    <div class="floating-item one">PORT: 443 [OPEN]</div>
+                    <div class="floating-item two">INTEGRITY: OK</div>
+                    <div class="floating-item three">TLS_AES_256_GCM</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-indicator-mouse">
+                <div class="scroll-indicator-wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Metric stats Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Security Profile</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="about-layout">
+                <div class="about-desc">
+                    <p>
+                        As a cybersecurity professional and penetration tester, I combine deep technical expertise with a holistic understanding of enterprise threat surfaces. I specialize in identifying system weaknesses, simulating advanced persistent threats, and delivering actionable hardening roadmaps.
+                    </p>
+                    <p>
+                        Beyond consulting, I direct authorized computer education programs, shaping curriculum for Web Application Security, CCA, and Web Development. My objective is to bridge the gap between architectural vulnerability and defensive resilience.
+                    </p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card glass-card">
+                            <span class="stat-val" data-target="3">0</span>
+                            <span class="stat-lbl">Years Exp</span>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <span class="stat-val" data-target="150">0</span>
+                            <span class="stat-lbl">Bugs Disclosed</span>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <span class="stat-val" data-target="350">0</span>
+                            <span class="stat-lbl">Students Taught</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Code Editor Representation of Tech Stack -->
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        <div class="loader-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="code-panel-file"><i class="fas fa-terminal"></i> security-profile.json</div>
+                    </div>
+                    <div class="code-panel-body">
+                        <div class="code-line">
+                            <span class="code-num">01</span>
+                            <span class="code-text"><span class="c-keyword">const</span> <span class="c-var">specialist</span> = {</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="code-num">02</span>
+                            <span class="code-text">  name: <span class="c-string">"Sagar Majumdar"</span>,</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="code-num">03</span>
+                            <span class="code-text">  role: <span class="c-string">"Ethical Hacker"</span>,</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="code-num">04</span>
+                            <span class="code-text">  focus: [</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="code-num">05</span>
+                            <span class="code-text">    <span class="c-string">"Penetration Testing"</span>,</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="code-num">06</span>
+                            <span class="code-text">    <span class="c-string">"Red Teaming"</span>,</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="code-num">07</span>
+                            <span class="code-text">    <span class="c-string">"Securing Infrastructures"</span></span>
+                        </div>
+                        <div class="code-line">
+                            <span class="code-num">08</span>
+                            <span class="code-text">  ],</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="code-num">09</span>
+                            <span class="code-text">  os: [<span class="c-string">"Kali Linux"</span>, <span class="c-string">"Arch"</span>, <span class="c-string">"RHEL"</span>],</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="code-num">10</span>
+                            <span class="code-text">  activeCertifications: true</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="code-num">11</span>
+                            <span class="code-text">};</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Terminal Console Section -->
+    <section id="console" class="console-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Cyber Terminal</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="console-layout">
+                <div class="console-widget">
+                    <div class="console-top">
+                        <div class="console-title">
+                            <i class="fas fa-terminal"></i>
+                            <span>sec-guest@sagarmajumdar: ~</span>
+                        </div>
+                        <div class="loader-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="console-body" id="consoleBody">
+                        <div class="console-log-row">Initializing SagarOS Console interface...</div>
+                        <div class="console-log-row">Type <span class="c-var">help</span> for a list of available cybersecurity commands.</div>
+                        <div class="console-prompt-row">
+                            <span class="console-path">sec-guest@sagarmajumdar:~$</span>
+                            <input type="text" class="console-input" id="consoleInput" autocomplete="off" autofocus>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Radar Chart & Bars Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Matrix</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="skills-layout">
+                <div class="skills-chart-box glass-card">
+                    <canvas id="radarChart"></canvas>
+                </div>
+                
+                <div class="skills-bars">
+                    <div class="skills-cat">
+                        <h3>Offensive Protocols</h3>
+                        <div class="skill-row">
+                            <div class="skill-info">
+                                <span>Penetration Testing</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar-outer">
+                                <div class="skill-bar-inner" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-info">
+                                <span>Ethical Hacking</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar-outer">
+                                <div class="skill-bar-inner" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-info">
+                                <span>Vulnerability Assessment</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="skill-bar-outer">
+                                <div class="skill-bar-inner" data-width="88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-cat">
+                        <h3>Defensive Matrix & Auditing</h3>
+                        <div class="skill-row">
+                            <div class="skill-info">
+                                <span>Network Defense / Wireshark</span>
+                                <span>82%</span>
+                            </div>
+                            <div class="skill-bar-outer">
+                                <div class="skill-bar-inner" data-width="82%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-info">
+                                <span>Web Application Security</span>
+                                <span>86%</span>
+                            </div>
+                            <div class="skill-bar-outer">
+                                <div class="skill-bar-inner" data-width="86%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-info">
+                                <span>Metasploit & Exploitation</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar-outer">
+                                <div class="skill-bar-inner" data-width="85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Operations Log</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-header">
+                            <span class="timeline-date">Sep 2021 - Present</span>
+                            <h3 class="timeline-title">Manager (Technical Operations)</h3>
+                            <span class="timeline-comp">M Interior | Design Studio</span>
+                        </div>
+                        <p class="timeline-body">
+                            Directing operational logistics and network deployment for modular manufacturing systems, overseeing internal infrastructure security.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-header">
+                            <span class="timeline-date">Dec 2024 - Present</span>
+                            <h3 class="timeline-title">Branch Head</h3>
+                            <span class="timeline-comp">CBCE HABRA</span>
+                        </div>
+                        <p class="timeline-body">
+                            Supervising authorized computer training, managing local network infrastructure audits, and delivering technical curriculum.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-header">
+                            <span class="timeline-date">Aug 2024 - Aug 2025</span>
+                            <h3 class="timeline-title">Cyber Security Mentor</h3>
+                            <span class="timeline-comp">Superprof</span>
+                        </div>
+                        <p class="timeline-body">
+                            Delivered structured security lectures, mentoring students worldwide in secure coding, Linux networking, and ethical hacking.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-header">
+                            <span class="timeline-date">Mar 2024 - Aug 2024</span>
+                            <h3 class="timeline-title">Teaching Faculty</h3>
+                            <span class="timeline-comp">Central Board of Computer Saksharta Mission</span>
+                        </div>
+                        <p class="timeline-body">
+                            Lectured Web Application Security (Level 1 & 2), covering CCA, DCA, and core defensive programming strategies.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-header">
+                            <span class="timeline-date">Feb 2022 - Oct 2022</span>
+                            <h3 class="timeline-title">Junior Security Tester</h3>
+                            <span class="timeline-comp">Docktape Technologies</span>
+                        </div>
+                        <p class="timeline-body">
+                            Conducted contract-based vulnerability assessments and internal security mapping under senior engineers.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-header">
+                            <span class="timeline-date">May 2021 - Oct 2021</span>
+                            <h3 class="timeline-title">Internship Trainee</h3>
+                            <span class="timeline-comp">HCL Technologies</span>
+                        </div>
+                        <p class="timeline-body">
+                            Assisted with network auditing protocols, threat classification, and secure operating system imaging.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Case Studies</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 Card -->
+                <div class="project-card glass-card" data-project="0">
+                    <div class="project-img-box">
+                        <img src="assets/images/project_pentest.png" alt="Enterprise Pentesting">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="project-tag">Active Directory</span>
+                            <span class="project-tag">Kali Linux</span>
+                        </div>
+                        <h3 class="project-title">Enterprise Penetration Assessment</h3>
+                        <p class="project-desc">Audited and compromised Active Directory systems for a financial institution during an authorization evaluation.</p>
+                        <div class="project-footer">
+                            <span>Analyze Case Study</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 Card -->
+                <div class="project-card glass-card" data-project="1">
+                    <div class="project-img-box">
+                        <img src="assets/images/project_scanner.png" alt="Vulnerability Scanner">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Socket Programming</span>
+                        </div>
+                        <h3 class="project-title">Automated Perimeter Scanner</h3>
+                        <p class="project-desc">A custom asynchronous port-auditing and network banner analyzer script that checks vulnerabilities matching active CVE databases.</p>
+                        <div class="project-footer">
+                            <span>Analyze Case Study</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 Card -->
+                <div class="project-card glass-card" data-project="2">
+                    <div class="project-img-box">
+                        <img src="assets/images/project_hardening.png" alt="Web Hardening">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="project-tag">OWASP Top 10</span>
+                            <span class="project-tag">Secure Code Review</span>
+                        </div>
+                        <h3 class="project-title">E-Commerce Security Hardening</h3>
+                        <p class="project-desc">Identified and mitigated high-risk injection vulnerabilities and secure state handling parameters for a high-volume shopping service.</p>
+                        <div class="project-footer">
+                            <span>Analyze Case Study</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certs-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Certifications</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="certs-grid">
+                <!-- Cert 1 -->
+                <div class="cert-card glass-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3 class="cert-title">CC Domain 1: Security Principles</h3>
+                    <span class="cert-issuer">ISC2</span>
+                    <span class="cert-date">Oct 2025 - Oct 2028</span>
+                    <span class="cert-id">ID: b526dda8-0743-43ed-8554-cb1bf32c0bd6</span>
+                </div>
+                
+                <!-- Cert 2 -->
+                <div class="cert-card glass-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3 class="cert-title">CC Course Pre-assessment</h3>
+                    <span class="cert-issuer">ISC2</span>
+                    <span class="cert-date">Oct 2025 - Oct 2028</span>
+                    <span class="cert-id">ID: b526dda8-0743-43ed-8554-cb1bf32c0bd6</span>
+                </div>
+
+                <!-- Cert 3 -->
+                <div class="cert-card glass-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-user-ninja"></i>
+                    </div>
+                    <h3 class="cert-title">Cisco Certified Ethical Hacker</h3>
+                    <span class="cert-issuer">Cisco Networking Academy</span>
+                    <span class="cert-date">Sep 2025</span>
+                    <span class="cert-id">CCE-H Credential</span>
+                </div>
+
+                <!-- Cert 4 -->
+                <div class="cert-card glass-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3 class="cert-title">ICIP | Critical Infrastructure</h3>
+                    <span class="cert-issuer">OPSWAT Academy</span>
+                    <span class="cert-date">Sep 2025</span>
+                    <span class="cert-id">CIP Specialist Path</span>
+                </div>
+
+                <!-- Cert 5 -->
+                <div class="cert-card glass-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <h3 class="cert-title">OCFA | Cybersecurity Fundamentals</h3>
+                    <span class="cert-issuer">OPSWAT Academy</span>
+                    <span class="cert-date">Apr 2024</span>
+                    <span class="cert-id">OCFA Associate</span>
+                </div>
+
+                <!-- Cert 6 -->
+                <div class="cert-card glass-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3 class="cert-title">Make In-house Hacking Lab</h3>
+                    <span class="cert-issuer">CodeRed (EC-Council)</span>
+                    <span class="cert-date">Aug 2025</span>
+                    <span class="cert-id">ID: 430183</span>
+                </div>
+
+                <!-- Cert 7 -->
+                <div class="cert-card glass-card">
+                    <div class="cert-icon">
+                        <i class="fab fa-android"></i>
+                    </div>
+                    <h3 class="cert-title">Android Bug Bounty: Hunt Like a Rat</h3>
+                    <span class="cert-issuer">CodeRed (EC-Council)</span>
+                    <span class="cert-date">Aug 2025</span>
+                    <span class="cert-id">ID: 428720</span>
+                </div>
+
+                <!-- Cert 8 -->
+                <div class="cert-card glass-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="cert-title">SQL Injection Attacks</h3>
+                    <span class="cert-issuer">CodeRed (EC-Council)</span>
+                    <span class="cert-date">Aug 2025</span>
+                    <span class="cert-id">ID: 427078</span>
+                </div>
+
+                <!-- Cert 9 -->
+                <div class="cert-card glass-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 class="cert-title">Introduction to Cybersecurity</h3>
+                    <span class="cert-issuer">Cisco Networking Academy</span>
+                    <span class="cert-date">Jul 2025</span>
+                    <span class="cert-id">Path Finder Course</span>
+                </div>
+
+                <!-- Cert 10 -->
+                <div class="cert-card glass-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3 class="cert-title">Diploma in Digital Photography</h3>
+                    <span class="cert-issuer">Alison Academy</span>
+                    <span class="cert-date">Nov 2024</span>
+                    <span class="cert-id">Visual Art & Media</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Lead capture section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Initiate Contact</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="contact-layout">
+                <div class="contact-info">
+                    <h3>Securing Your Digital Assets</h3>
+                    <p>
+                        Ready to evaluate your company's perimeter or interested in organizing technical threat mentoring workshops? Send details for a complete assessment scoping.
+                    </p>
+                    
+                    <div class="contact-channels">
+                        <div class="contact-node">
+                            <div class="contact-node-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="contact-node-detail">
+                                <span class="contact-lbl">Base Location</span>
+                                <span class="contact-val">Habra, West Bengal, India</span>
+                            </div>
+                        </div>
+                        <div class="contact-node">
+                            <div class="contact-node-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-node-detail">
+                                <span class="contact-lbl">Secure Mail</span>
+                                <span class="contact-val">sagarmajumdar225@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="contact-node">
+                            <div class="contact-node-icon"><i class="fab fa-whatsapp"></i></div>
+                            <div class="contact-node-detail">
+                                <span class="contact-lbl">Secure Chat</span>
+                                <span class="contact-val">+91 6296600565</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-rack">
+                        <a href="https://www.linkedin.com/in/sagarmajumdar" target="_blank" class="social-rack-btn" aria-label="Sagar Majumdar's LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/sagarmajumdar225" target="_blank" class="social-rack-btn" aria-label="Sagar Majumdar's GitHub Repository"><i class="fab fa-github"></i></a>
+                        <a href="https://sagar-majumdar.medium.com/" target="_blank" class="social-rack-btn" aria-label="Sagar Majumdar's Medium Articles"><i class="fab fa-medium-m"></i></a>
+                        <a href="https://www.facebook.com/sagarmajumdar.in" target="_blank" class="social-rack-btn" aria-label="Sagar Majumdar's Facebook Page"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/sagarmajumdar.in" target="_blank" class="social-rack-btn" aria-label="Sagar Majumdar's Instagram Account"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-box glass-card">
+                    <form id="contactForm">
+                        <div class="form-row-dual">
+                            <div class="form-group">
+                                <input type="text" id="name" class="form-field" placeholder=" " required>
+                                <label for="name">Your Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" class="form-field" placeholder=" " required>
+                                <label for="email">Secure Email</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" class="form-field" placeholder=" " required>
+                            <label for="subject">Scope Subject</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" class="form-field" placeholder=" " rows="5" required></textarea>
+                            <label for="message">Detailed Scope / Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Transmit Packet</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-layout">
+                <div class="footer-copy">
+                    <p>&copy; 2026 Sagar Majumdar. All rights reserved. Encrypted Connection.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#console">Console</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Case Study Interactive Popup Modals -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-wrapper">
+            <div class="modal-header">
+                <div class="modal-title-box">
+                    <h3 id="modalProjectTitle">Project Title</h3>
+                </div>
+                <button class="modal-close-btn" id="modalClose"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-nav-tabs">
+                <button class="modal-tab-btn active" data-tab="overview">Overview</button>
+                <button class="modal-tab-btn" data-tab="methodology">Methodology</button>
+                <button class="modal-tab-btn" data-tab="tools">Tools Used</button>
+                <button class="modal-tab-btn" data-tab="results">Results</button>
+            </div>
+            <div class="modal-content-area">
+                <div class="modal-pane active" id="modalTabOverview">
+                    <h4 id="overviewHeader">Project Background</h4>
+                    <p id="overviewText">Overview body text</p>
+                </div>
+                <div class="modal-pane" id="modalTabMethodology">
+                    <h4>Execution Plan</h4>
+                    <ul class="modal-list" id="methodologyList">
+                        <!-- Filled dynamically -->
+                    </ul>
+                </div>
+                <div class="modal-pane" id="modalTabTools">
+                    <h4>Vulnerability Diagnostics Stack</h4>
+                    <div class="modal-tools-list" id="toolsList">
+                        <!-- Filled dynamically -->
+                    </div>
+                </div>
+                <div class="modal-pane" id="modalTabResults">
+                    <h4>Deliverables & Impact</h4>
+                    <ul class="modal-list" id="resultsList">
+                        <!-- Filled dynamically -->
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="https://github.com/sagarmajumdar225" target="_blank" class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.8rem;"><i class="fab fa-github" style="margin-right: 8px;"></i>View Source</a>
+                <button class="btn btn-primary" id="modalCloseFooter" style="padding: 10px 20px; font-size: 0.8rem;">Dismiss Dialog</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating shortcut action -->
+    <div class="floating-widget">
+        <a href="#contact" class="floating-action-btn" aria-label="Quick Navigation to Contact Section">
+            <i class="fas fa-shield-alt"></i>
+        </a>
+    </div>
+
+    <!-- Core Javascript Scripts -->
+    <!-- GSAP for advanced scroll & magnetic visual effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Lenis for GSAP quality smooth scrolling -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.27/dist/lenis.min.js"></script>
+    <!-- ChartJS for technical matrix radar visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom scripts logic -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
